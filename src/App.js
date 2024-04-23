@@ -1,23 +1,24 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import styled from 'styled-components';
+
+
 
 function App() {
+
+  const PropsBackground = styled.div(props => ({
+    background: props.$background,
+    height: '100vh',
+    width: '100%',
+    backgroundColor: '#e1e6e6'
+  }));
+  
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div>
+        <PropsBackground/>
+      </div>
     </div>
   );
 }
